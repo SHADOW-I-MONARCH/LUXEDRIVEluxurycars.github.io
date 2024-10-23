@@ -49,7 +49,7 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
             </div>
-            <button type="submit">Send Message</button>
+            <button type="submit" onclick="send(event)>Send Message</button>
         </form>
 
         <div class="contact-info">
@@ -64,6 +64,13 @@
     <footer>
         <p>&copy; 2024 LuxeDrive. All rights reserved.</p>
     </footer>
+     <script>
+        function send(event) {
+            event.preventDefault(); // Prevents form from submitting and refreshing the page
+            const rating = document.getElementById("rating").value;
+            alert(`Your Response has been recorded`);
+        }
+    </script>
 </body>
 
 </html>
