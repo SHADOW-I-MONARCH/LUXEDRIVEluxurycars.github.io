@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .confirmation-details {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 400px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-details">
+        <h1>Thank You for Your Purchase!</h1>
+        <p>Your order has been successfully placed.</p>
+        <h2>Order Summary:</h2>
+        <p id="car-title"></p>
+        <p id="car-price"></p>
+    </div>
+    <button onclick="window.location.href='index.html'">Back to Models</button>
+    <script>
+        const cars = {
+            compact: {
+                title: "LuxeDrive Compact",
+                price: "$30,000"
+            },
+            city: {
+                title: "LuxeDrive City",
+                price: "$35,000"
+            },
+            emini: {
+                title: "LuxeDrive E-Mini",
+                price: "$40,000"
+            },
+            executive: {
+                title: "LuxeDrive Executive",
+                price: "$60,000"
+            },
+            family: {
+                title: "LuxeDrive Family",
+                price: "$50,000"
+            },
+            sport: {
+                title: "LuxeDrive Sport",
+                price: "$70,000"
+            },
+            pinnacle: {
+                title: "LuxeDrive Pinnacle",
+                price: "$80,000"
+            },
+            majestic: {
+                title: "LuxeDrive Majestic",
+                price: "$75,000"
+            },
+            velocity: {
+                title: "LuxeDrive Velocity",
+                price: "$150,000"
+            }
+        };
+
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        const model = getQueryParam('model');
+        if (model && cars[model]) {
+            document.getElementById('car-title').innerText = cars[model].title;
+            document.getElementById('car-price').innerText = cars[model].price;
+        } else {
+            document.getElementById('car-title').innerText = 'Model not found';
+            document.getElementById('car-price').innerText = '';
+        }
+    </script>
+</body>
+</html>
