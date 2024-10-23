@@ -103,6 +103,10 @@ const cars = {
         title: "",
         image: "img/velocity.jpg",  // Replace with actual path
         description: "no models selected ",
+            specs: [" not found"
+           
+        ],
+
        
         price: "******"
     }
