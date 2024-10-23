@@ -1,21 +1,21 @@
 const cars = {
     compact: {
         title: "LuxeDrive Compact",
-        image: "img/compact.jpg",
+        image: "carimg1.jpg",
         description: "Agile and efficient for urban driving. Perfect for navigating busy city streets with style and ease.",
         specs: ["0-60 mph: 7.2s", "MPG: 42", "Horsepower: 180"],
         price: "$30,000"
     },
     city: {
         title: "LuxeDrive City",
-        image: "img/city.jpg",
+        image: "carimg2.jpg",
         description: "The ultimate urban companion. Compact size with premium features for the discerning city dweller.",
         specs: ["0-60 mph: 8.0s", "MPG: 45", "Horsepower: 150"],
         price: "$35,000"
     },
      emini: {
         title: "LuxeDrive E-Mini",
-        image: "img/emini.jpg",  // Replace with actual path
+        image: "carimg3.jpg",  // Replace with actual path
         description: "Eco-friendly and stylish urban commuter. Zero emissions with all the luxury you expect from LuxeDrive.",
         specs: [
             "Range: 250 mi",
@@ -26,7 +26,7 @@ const cars = {
     },
     executive: {
         title: "LuxeDrive Executive",
-        image: "img/executive.jpg",  // Replace with actual path
+        image: "carimg4.jpg",  // Replace with actual path
         description: "Elegant and powerful, perfect for executives. Combines luxury with performance for a superior driving experience.",
         specs: [
             "0-60 mph: 5.2s",
@@ -37,7 +37,7 @@ const cars = {
     },
     family: {
         title: "LuxeDrive Family",
-        image: "img/family.jpg",  // Replace with actual path
+        image: "carimg5.jpg",  // Replace with actual path
         description: "Spacious and comfortable for family trips. Safety, luxury, and versatility in one elegant package.",
         specs: [
             "Seats: 7",
@@ -48,7 +48,7 @@ const cars = {
     },
     sport: {
         title: "LuxeDrive Sport",
-        image: "img/sport.jpg",  // Replace with actual path
+        image: "carimg6.jpg",  // Replace with actual path
         description: "Performance-oriented sedan for thrill-seekers. Experience the perfect blend of luxury and high-performance.",
         specs: [
             "0-60 mph: 3.9s",
@@ -59,7 +59,7 @@ const cars = {
     },
     pinnacle: {
         title: "LuxeDrive Pinnacle",
-        image: "img/pinnacle.jpg",  // Replace with actual path
+        image: "carimg7.jpg",  // Replace with actual path
         description: "The ultimate in luxury and comfort. Our flagship model redefines what a luxury car can be.",
         specs: [
             "0-60 mph: 4.4s",
@@ -70,7 +70,7 @@ const cars = {
     },
     majestic: {
         title: "LuxeDrive Majestic",
-        image: "img/majestic.jpg",  // Replace with actual path
+        image: "carimg8.jpg",  // Replace with actual path
         description: "Combining luxury with versatility. Our premium SUV offers comfort, space, and capability.",
         specs: [
             "Ground Clearance: 9.6 in",
@@ -81,7 +81,7 @@ const cars = {
     },
     velocity: {
         title: "LuxeDrive Velocity",
-        image: "img/velocity.jpg",  // Replace with actual path
+        image: "carimg9.jpg",  // Replace with actual path
         description: "High-performance luxury sports car. Experience breathtaking speed without compromising on luxury.",
         specs: [
             "0-60 mph: 2.8s",
