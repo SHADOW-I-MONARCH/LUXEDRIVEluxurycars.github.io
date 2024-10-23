@@ -99,8 +99,8 @@
 
         const model = getQueryParam('model');
         if (model && cars[model]) {
-            document.getElementById('car-title').innerText = cars[model].title;
-            document.getElementById('car-price').innerText = cars[model].price;
+            document.getElementById('car-title').innerText = cars[carmodel].title;
+            document.getElementById('car-price').innerText = cars[carmodel].price;
         } else {
             document.getElementById('car-title').innerText = 'Model not found';
             document.getElementById('car-price').innerText = '';
