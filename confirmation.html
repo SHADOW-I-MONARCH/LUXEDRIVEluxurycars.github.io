@@ -50,62 +50,9 @@
         <p id="car-title"></p>
         <p id="car-price"></p>
     </div>
-    <button onclick="window.location.href='index.html'">Back to Models</button>
-    
-    <script>
-        const car = {
-            compact: {
-                title: "LuxeDrive Compact",
-                price: "$30,000"
-            },
-            city: {
-                title: "LuxeDrive City",
-                price: "$35,000"
-            },
-            emini: {
-                title: "LuxeDrive E-Mini",
-                price: "$40,000"
-            },
-            executive: {
-                title: "LuxeDrive Executive",
-                price: "$60,000"
-            },
-            family: {
-                title: "LuxeDrive Family",
-                price: "$50,000"
-            },
-            sport: {
-                title: "LuxeDrive Sport",
-                price: "$70,000"
-            },
-            pinnacle: {
-                title: "LuxeDrive Pinnacle",
-                price: "$80,000"
-            },
-            majestic: {
-                title: "LuxeDrive Majestic",
-                price: "$75,000"
-            },
-            velocity: {
-                title: "LuxeDrive Velocity",
-                price: "$150,000"
-            }
-        };
+    <button onclick="window.location.href='models.html'">Back to Models</button>
 
-        function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
-
-        const model = getQueryParam('model');
-        if (model && car[model]) {
-            document.getElementById('car-title').innerText = car[model].title;
-            document.getElementById('car-price').innerText = car[model].price;
-        } else {
-            document.getElementById('car-title').innerText = 'Model not found';
-            document.getElementById('car-price').innerText = '';
-        }
-    </script>
+    <script src="confirmation.js"></script>
 </body>
 
 </html>
