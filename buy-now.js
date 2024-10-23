@@ -1,27 +1,19 @@
 const cars = {
     compact: {
         title: "LuxeDrive Compact",
-        image: "img/compact.jpg",  // Replace with actual path
+        image: "img/compact.jpg",
         description: "Agile and efficient for urban driving. Perfect for navigating busy city streets with style and ease.",
-        specs: [
-            "0-60 mph: 7.2s",
-            "MPG: 42",
-            "Horsepower: 180"
-        ],
+        specs: ["0-60 mph: 7.2s", "MPG: 42", "Horsepower: 180"],
         price: "$30,000"
     },
     city: {
         title: "LuxeDrive City",
-        image: "img.jpg",  // Replace with actual path
+        image: "img/city.jpg",
         description: "The ultimate urban companion. Compact size with premium features for the discerning city dweller.",
-        specs: [
-            "0-60 mph: 8.0s",
-            "MPG: 45",
-            "Horsepower: 150"
-        ],
+        specs: ["0-60 mph: 8.0s", "MPG: 45", "Horsepower: 150"],
         price: "$35,000"
     },
-    emini: {
+     emini: {
         title: "LuxeDrive E-Mini",
         image: "img/emini.jpg",  // Replace with actual path
         description: "Eco-friendly and stylish urban commuter. Zero emissions with all the luxury you expect from LuxeDrive.",
@@ -98,17 +90,12 @@ const cars = {
         ],
         price: "$150,000"
     },
-
-        free: {
-        title: "",
-        image: "img/velocity.jpg",  // Replace with actual path
-        description: "no models selected ",
-            specs: [" not found"
-           
-        ],
-
-       
-        price: "******"
+    free: {
+        title: "Model Not Found",
+        image: "img/not-found.jpg", // Placeholder image
+        description: "Sorry, the selected model was not found. Please go back and choose another car model.",
+        specs: ["N/A"],
+        price: "N/A"
     }
 };
 
@@ -118,26 +105,33 @@ function getQueryParam(param) {
 }
 
 function displayCarDetails(carModel) {
-    const car = cars[carModel];
+    const car = cars[carModel] || cars['free']; // Default to 'free' if model is not found
 
-    if (car) {
-        document.getElementById('car-title').innerText = car.title;
-        document.getElementById('car-image').src = car.image;
-        document.getElementById('car-description').innerText = car.description;
+    document.getElementById('car-title').innerText = car.title;
+    document.getElementById('car-image').src = car.image;
+    document.getElementById('car-description').innerText = car.description;
 
-        const specsList = document.getElementById('car-specs-list');
-        specsList.innerHTML = ''; // Clear previous specs
-        car.specs.forEach(spec => {
-            const li = document.createElement('li');
-            li.innerText = spec;
-            specsList.appendChild(li);
-        });
+    const specsList = document.getElementById('car-specs-list');
+    specsList.innerHTML = ''; // Clear previous specs
+    car.specs.forEach(spec => {
+        const li = document.createElement('li');
+        li.innerText = spec;
+        specsList.appendChild(li);
+    });
 
-        document.getElementById('car-price').innerText = car.price;
+    document.getElementById('car-price').innerText = car.price;
+
+    // Update the confirm purchase button URL
+    const confirmButton = document.querySelector('.cta-button');
+    if (carModel !== 'free') {
+        confirmButton.href = `confirmation.html?model=${carModel}`;
+        confirmButton.style.display = 'inline-block'; // Show button
     } else {
-        document.getElementById('buy-now').innerHTML = '<h2>Car not found</h2>';
+        confirmButton.style.display = 'none'; // Hide button if no valid model
     }
 }
 
 const model = getQueryParam('model');
 displayCarDetails(model);
+
+ 
