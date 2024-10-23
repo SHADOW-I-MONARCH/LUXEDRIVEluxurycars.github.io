@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +10,38 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 50px;
+            background-color: #1a1a1a; /* Metallic black */
+            color: white;
         }
+
         .confirmation-details {
             border: 1px solid #ccc;
             padding: 20px;
             border-radius: 5px;
             max-width: 400px;
             margin: auto;
+            background-color: #2c2c2c; /* Darker background for details */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4ecdc4;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45b7d1;
         }
     </style>
 </head>
+
 <body>
     <div class="confirmation-details">
         <h1>Thank You for Your Purchase!</h1>
@@ -28,6 +51,7 @@
         <p id="car-price"></p>
     </div>
     <button onclick="window.location.href='index.html'">Back to Models</button>
+    
     <script>
         const cars = {
             compact: {
@@ -83,4 +107,5 @@
         }
     </script>
 </body>
+
 </html>
