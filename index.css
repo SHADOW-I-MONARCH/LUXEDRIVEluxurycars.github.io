@@ -14,7 +14,7 @@ header {
     color: white;
     padding: 1rem 0;
     position: fixed;
-    width: 100% ;
+    width: 100%;
     top: 0;
     z-index: 1000;
     transition: background-color 0.3s ease;
@@ -244,5 +244,29 @@ footer {
 
     .feature {
         flex-basis: 100%;
+    }
+}/* For larger tablets and small desktops */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    .hero p {
+        font-size: 1.3rem;
+    }
+}
+
+/* For smaller screens and mobile devices */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 10px 0;
     }
 }
