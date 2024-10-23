@@ -97,6 +97,14 @@ const cars = {
             "Horsepower: 789"
         ],
         price: "$150,000"
+    },
+
+        free: {
+        title: "",
+        image: "img/velocity.jpg",  // Replace with actual path
+        description: "no models selected ",
+       
+        price: "******"
     }
 };
 
