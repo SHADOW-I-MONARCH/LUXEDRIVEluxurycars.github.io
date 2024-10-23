@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LuxeDrive - Rate Our Cars</title>
     <link rel="stylesheet" href="ratings.css">
-
 </head>
 
 <body>
@@ -63,20 +62,25 @@
                 <textarea id="review" name="review" placeholder="Share your experience with this model..."
                     required></textarea>
             </div>
-           <button type="submit" onclick="submitRating(event)">Submit Rating</button>
+            <button type="submit" onclick="submitRating(event)">Submit Rating</button>
         </form>
     </main>
 
     <footer>
         <p>&copy; 2024 LuxeDrive. All rights reserved.</p>
     </footer>
-     <script>
+    <script>
         function submitRating(event) {
-           
-            const rating = document.getElementById("rating").value;
-            alert(`Thank you for your rating of ${rating}!`);
+            event.preventDefault(); // Prevents the form from submitting and refreshing the page
+            const selectedRating = document.querySelector('input[name="rating"]:checked');
+            if (selectedRating) {
+                alert(`Thank you for your rating of ${selectedRating.value} stars!`);
+            } else {
+                alert("Please select a rating.");
+            }
         }
     </script>
 </body>
 
 </html>
+
