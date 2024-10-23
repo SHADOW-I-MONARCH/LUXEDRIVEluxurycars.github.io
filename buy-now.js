@@ -12,7 +12,7 @@ const cars = {
     },
     city: {
         title: "LuxeDrive City",
-        image: "img/city.jpg",  // Replace with actual path
+        image: "img.jpg",  // Replace with actual path
         description: "The ultimate urban companion. Compact size with premium features for the discerning city dweller.",
         specs: [
             "0-60 mph: 8.0s",
