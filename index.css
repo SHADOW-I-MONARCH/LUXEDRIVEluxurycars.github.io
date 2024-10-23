@@ -271,3 +271,32 @@ footer {
         margin: 10px 0;
     }
 }
+/* Mobile Menu Styles */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        z-index: 1000;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+}
