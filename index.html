@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeDrive - Luxury Cars</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/placeholder.svg?height=40&width=40" alt="LuxeDrive Logo">
+                <a href="#"><strong>LuxeDrive</strong></a>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="models.html">Models</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="ratings.html">Rate Us</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+  <section class="hero">
+    <video autoplay muted loop class="background-video">
+        <source src="C:\Users\avita\OneDrive\Desktop\car3-site-main\cardrift.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+        <h1>Experience Luxury Driving</h1>
+        <p>Discover the perfect blend of performance and elegance</p>
+        <a href="models.html" class="cta-button">Explore Our Models</a>
+    </div>
+</section>
+
+    <section class="features">
+        <div class="feature">
+            <img src="/placeholder.svg?height=200&width=300" alt="Performance">
+            <h2>Unmatched Performance</h2>
+            <p>Experience the thrill of cutting-edge engineering and powerful engines that set new standards in
+                automotive excellence.</p>
+        </div>
+        <div class="feature">
+            <img src="/placeholder.svg?height=200&width=300" alt="Comfort">
+            <h2>Supreme Comfort</h2>
+            <p>Indulge in luxurious interiors designed for ultimate comfort and style, making every journey a pleasure.
+            </p>
+        </div>
+        <div class="feature">
+            <img src="/placeholder.svg?height=200&width=300" alt="Innovation">
+            <h2>Innovative Technology</h2>
+            <p>Stay connected with state-of-the-art infotainment and safety features that redefine the driving
+                experience.</p>
+        </div>
+    </section>
+
+    <section class="featured-cars">
+        <h2>Featured Models</h2>
+        <div class="car-grid">
+            <div class="car-card">
+                <img src="/placeholder.svg?height=200&width=300" alt="Luxury Sedan">
+                <div class="car-info">
+                    <h3>Luxury Sedan</h3>
+                    <p>Elegant and powerful, perfect for executives who demand the best.</p>
+                </div>
+            </div>
+            <div class="car-card">
+                <img src="/placeholder.svg?height=200&width=300" alt="Sports Coupe">
+                <div class="car-info">
+                    <h3>Sports Coupe</h3>
+                    <p>Sleek design with exhilarating performance for the true enthusiast.</p>
+                </div>
+            </div>
+            <div class="car-card">
+                <img src="/placeholder.svg?height=200&width=300" alt="Electric SUV">
+                <div class="car-info">
+                    <h3>Electric SUV</h3>
+                    <p>Eco-friendly luxury with spacious interiors and cutting-edge technology.</p>
+                </div>
+            </div>
+            <div class="car-card">
+                <img src="/placeholder.svg?height=200&width=300" alt="Compact Hatchback">
+                <div class="car-info">
+                    <h3>Compact Hatchback</h3>
+                    <p>Agile and efficient for urban driving without compromising on style.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LuxeDrive. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+
+</html>

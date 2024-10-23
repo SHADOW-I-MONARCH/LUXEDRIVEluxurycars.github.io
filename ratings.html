@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeDrive - Rate Our Cars</title>
+    <link rel="stylesheet" href="ratings.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/placeholder.svg?height=40&width=40" alt="LuxeDrive Logo">
+                <a href="index.html">LuxeDrive</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="models.html">Models</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="ratings.html">Rate Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="ratings-header">
+        <h1>Rate Our Cars</h1>
+        <p>Your feedback drives our excellence. Share your LuxeDrive experience with us.</p>
+    </section>
+
+    <main class="ratings-content">
+        <form class="rating-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="car-model">Select a model:</label>
+                <select id="car-model" name="car-model" required>
+                    <option value="">Choose a model</option>
+                    <option value="compact">LuxeDrive Compact</option>
+                    <option value="city">LuxeDrive City</option>
+                    <option value="e-mini">LuxeDrive E-Mini</option>
+                    <option value="executive">LuxeDrive Executive</option>
+                    <option value="family">LuxeDrive Family</option>
+                    <option value="sport">LuxeDrive Sport</option>
+                    <option value="pinnacle">LuxeDrive Pinnacle</option>
+                    <option value="majestic">LuxeDrive Majestic</option>
+                    <option value="velocity">LuxeDrive Velocity</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Your rating:</label>
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5" required><label for="star5"></label>
+                    <input type="radio" id="star4" name="rating" value="4" required><label for="star4"></label>
+                    <input type="radio" id="star3" name="rating" value="3" required><label for="star3"></label>
+                    <input type="radio" id="star2" name="rating" value="2" required><label for="star2"></label>
+                    <input type="radio" id="star1" name="rating" value="1" required><label for="star1"></label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="review">Your review:</label>
+                <textarea id="review" name="review" placeholder="Share your experience with this model..."
+                    required></textarea>
+            </div>
+            <button type="submit">Submit Rating</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LuxeDrive. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

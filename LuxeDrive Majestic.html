@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeDrive Majestic</title>
+    <link rel="stylesheet" href="models.css">
+    <script src="models.js" defer></script>
+	<style> /* Overall Styles */
+        body {
+            background-color: #1a1a1a; /* Metallic black */
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #000; /* Black */
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #ff6b6b; /* Hover color */
+        }
+
+        /* Row and Column Layout */
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 20px;
+            padding-top: 80px; /* To avoid header overlap */
+        }
+
+        .col {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Car Image */
+        .car-image {
+            width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Car Specs */
+        .car-specs {
+            margin-top: 20px;
+            background-color: #2c2c2c; /* Darker background for specs */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .car-specs h3 {
+            margin-top: 0;
+        }
+
+        .car-specs ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .car-specs li {
+            margin: 10px 0;
+        }
+
+        /* Button */
+        .cta-button {
+            display: inline-block;
+            background-color: #4ecdc4;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #45b7d1;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #000; /* Black */
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        
+        }</style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/placeholder.svg?height=40&width=40" alt="LuxeDrive Logo">
+                <a href="index.html">LuxeDrive</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="models.html">Models</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="ratings.html">Rate Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="car-details">
+        <h1>LuxeDrive Majestic</h1><div class="row">
+            <div class="col">
+        <img src="img.jpg" alt="LuxeDrive Majestic" class="car-image"></div>
+		<div class="col">
+        <p>Combining luxury with versatility, the LuxeDrive Majestic is our premium SUV. It offers comfort, space, and capability, making it perfect for any adventure.</p>
+        <div class="car-specs">
+            <h3>Specifications</h3>
+            <ul>
+                <li><strong>Engine:</strong> 3.5L V6</li>
+                <li><strong>Horsepower:</strong> 400 hp</li>
+                <li><strong>Ground Clearance:</strong> 9.6 in</li>
+                <li><strong>Towing Capacity:</strong> 7,500 lbs</li>
+                <li><strong>Off-road Modes:</strong> 5</li>
+            </ul>
+        </div></div ></div>
+        <a href="models.html" class="cta-button">Back to Models</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LuxeDrive. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
