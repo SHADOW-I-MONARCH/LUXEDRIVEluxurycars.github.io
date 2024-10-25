@@ -77,6 +77,9 @@ function displayOrderHistory() {
     const orderListElement = document.getElementById('order-list');
     orderListElement.innerHTML = ''; // Clear previous orders
 
+    // Retrieve order history from local storage
+    const orders = JSON.parse(localStorage.getItem('orderHistory')) || [];
+
     // Check if there are any orders to display
     if (orders.length === 0) {
         orderListElement.innerHTML = '<p>No orders found.</p>';
