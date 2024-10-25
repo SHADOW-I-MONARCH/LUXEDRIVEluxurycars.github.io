@@ -1,75 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order History</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .order-item {
-            padding: 10px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .order-title {
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-
-        .order-details {
-            margin: 5px 0;
-        }
-
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #ff6b6b;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #e55d5d;
-        }
-    </style>
+    <title>Order History - LuxeDrive</title>
+    <link rel="stylesheet" href="order-history.css">
+    <script src="order-history.js" defer></script>
 </head>
-
 <body>
     <header>
-        <h1>Order History</h1>
+        <nav>
+            <div class="logo">
+                <img src="carlogo.png?height=40&width=40" alt="LuxeDrive Logo">
+                <a href="index.html">LuxeDrive</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="models.html">Models</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="ratings.html">Rate Us</a></li>
+                <li><a href="order-history.html">Order History</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="container">
-        <div id="order-list"></div>
-        <a href="buy-now.html" class="cta-button">Go Back to Buy Cars</a>
-    </div>
-    <script src="order-history.js"></script>
-</body>
 
+    <main>
+        <h1>Your Order History</h1>
+        <table id="order-history-table">
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Date</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Order history rows will be dynamically populated here -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LuxeDrive. All rights reserved.</p>
+    </footer>
+</body>
 </html>
