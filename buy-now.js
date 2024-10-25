@@ -105,7 +105,7 @@ function getQueryParam(param) {
 }
 
 function displayCarDetails(carModel) {
-    const car = cars[carModel] || cars['free']; // Default to 'free' if model is not found
+  
 
     document.getElementById('car-title').innerText = car.title;
     document.getElementById('car-image').src = car.image;
