@@ -24,16 +24,51 @@ const orders = [
     {
         id: 4,
         model: "LuxeDrive Executive",
-        date: "2024-03-25",
+        date: "2024-04-12",
         price: "$60,000",
-        status: "Cancelled"
+        status: "Delivered"
     },
     {
         id: 5,
+        model: "LuxeDrive Sport",
+        date: "2024-05-20",
+        price: "$70,000",
+        status: "Cancelled"
+    },
+    {
+        id: 6,
         model: "LuxeDrive Family",
-        date: "2024-04-10",
+        date: "2024-06-15",
         price: "$50,000",
         status: "Delivered"
+    },
+    {
+        id: 7,
+        model: "LuxeDrive Pinnacle",
+        date: "2024-07-10",
+        price: "$80,000",
+        status: "Pending"
+    },
+    {
+        id: 8,
+        model: "LuxeDrive Velocity",
+        date: "2024-08-25",
+        price: "$150,000",
+        status: "Delivered"
+    },
+    {
+        id: 9,
+        model: "LuxeDrive Majestic",
+        date: "2024-09-05",
+        price: "$75,000",
+        status: "Returned"
+    },
+    {
+        id: 10,
+        model: "LuxeDrive E-Mini",
+        date: "2024-10-01",
+        price: "$40,000",
+        status: "Pending"
     }
 ];
 
@@ -41,6 +76,12 @@ const orders = [
 function displayOrderHistory() {
     const orderListElement = document.getElementById('order-list');
     orderListElement.innerHTML = ''; // Clear previous orders
+
+    // Check if there are any orders to display
+    if (orders.length === 0) {
+        orderListElement.innerHTML = '<p>No orders found.</p>';
+        return;
+    }
 
     orders.forEach(order => {
         const orderItem = document.createElement('div');
