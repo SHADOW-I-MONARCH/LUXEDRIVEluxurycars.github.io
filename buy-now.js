@@ -1,3 +1,4 @@
+// Car details object
 const cars = {
     compact: {
         title: "LuxeDrive Compact",
@@ -71,40 +72,29 @@ const cars = {
     }
 };
 
+// Utility function to get URL parameter
 function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
+    return new URLSearchParams(window.location.search).get(param);
 }
 
-function displayCarDetails(carModel) {
-    // Get the car data or fallback to the 'free' model if not found
-    const car = cars[carModel] || cars['free'];
+// Function to display car details
+function displayCarDetails(model) {
+    const car = cars[model] || cars['free'];
 
-    // Update the page elements with car details
-    document.getElementById('car-title').innerText = car.title;
+    document.getElementById('car-title').textContent = car.title;
     document.getElementById('car-image').src = car.image;
-    document.getElementById('car-description').innerText = car.description;
+    document.getElementById('car-description').textContent = car.description;
 
     const specsList = document.getElementById('car-specs-list');
-    specsList.innerHTML = ''; // Clear previous specs
-    car.specs.forEach(spec => {
-        const li = document.createElement('li');
-        li.innerText = spec;
-        specsList.appendChild(li);
-    });
+    specsList.innerHTML = car.specs.map(spec => `<li>${spec}</li>`).join('');
 
-    document.getElementById('car-price').innerText = car.price;
+    document.getElementById('car-price').textContent = car.price;
 
-    // Update the confirm purchase button URL
+    // Update purchase button link
     const confirmButton = document.querySelector('.cta-button');
-    if (carModel !== 'free') {
-        confirmButton.href = `confirmation.html?model=${carModel}`;
-        confirmButton.style.display = 'inline-block'; // Show button
-    } else {
-        confirmButton.style.display = 'none'; // Hide button if no valid model
-    }
+    confirmButton.href = model !== 'free' ? `confirmation.html?model=${model}` : '#';
+    confirmButton.style.display = model !== 'free' ? 'inline-block' : 'none';
 }
 
-// Fetch the model parameter and display car details
-const model = getQueryParam('model');
-displayCarDetails(model);
+// Get the model from URL and display details
+displayCarDetails(getQueryParam('model'));
