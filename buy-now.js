@@ -114,11 +114,35 @@ function displayCarDetails(carModel) {
 }
 
 // Function to save order data to local storage
-function saveOrderToHistory(order) {
-    let orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
-    orderHistory.push(order);
-    localStorage.setItem('orderHistory', JSON.stringify(orderHistory));
+// Function to display order history
+function displayOrderHistory() {
+    const orderList = document.getElementById('order-list');
+    const orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
+
+    if (orderHistory.length === 0) {
+        orderList.innerHTML = '<p>No orders found.</p>';
+        return;
+    }
+
+    orderHistory.forEach(order => {
+        const orderItem = document.createElement('div');
+        orderItem.classList.add('order-item');
+        
+        orderItem.innerHTML = `
+            <div class="order-title">${order.model}</div>
+            <div class="order-details">Price: ${order.price}</div>
+            <div class="order-details">Date: ${order.date}</div>
+            <div class="order-details">Status: ${order.status}</div>
+        `;
+
+        orderList.appendChild(orderItem);
+    });
 }
+
+// Call the function to display orders when the page loads
+
 
 const model = getQueryParam('model');
 displayCarDetails(model);
+displayOrderHistory();
+
