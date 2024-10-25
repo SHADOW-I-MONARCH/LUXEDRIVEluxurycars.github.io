@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order History</title>
-    <link rel="stylesheet" href="models.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,61 +15,48 @@
         }
 
         header {
-            background: #333;
-            color: white;
+            background-color: #333;
+            color: #fff;
             padding: 10px 0;
             text-align: center;
         }
 
-        h1 {
-            margin: 20px 0;
-        }
-
-        nav {
-            margin: 10px 0;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-
-        .order-list {
+        .container {
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
             background: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .order-item {
+            padding: 10px;
             border-bottom: 1px solid #eee;
-            padding: 10px 0;
-        }
-
-        .order-item:last-child {
-            border-bottom: none;
         }
 
         .order-title {
+            font-size: 1.2em;
             font-weight: bold;
-            color: #333;
         }
 
         .order-details {
             margin: 5px 0;
         }
-        
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #333;
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff6b6b;
             color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e55d5d;
         }
     </style>
 </head>
@@ -77,25 +64,12 @@
 <body>
     <header>
         <h1>Order History</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="models.html">Models</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="ratings.html">Rate Us</a>
-            <a href="buy-now.html">Buy Car</a>
-        </nav>
     </header>
-
-    <section id="order-history">
-        <div class="order-list" id="order-list"></div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 LuxeDrive. All rights reserved.</p>
-    </footer>
-
-    <script src="order-history.js" defer></script>
+    <div class="container">
+        <div id="order-list"></div>
+        <a href="buy-now.html" class="cta-button">Go Back to Buy Cars</a>
+    </div>
+    <script src="order-history.js"></script>
 </body>
 
 </html>
