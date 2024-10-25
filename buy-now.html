@@ -8,35 +8,21 @@
     <link rel="stylesheet" href="models.css">
     <style>
         .car-specs {
-            display: flex;
-            justify-content: space-between;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
-        }
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
 
-        .car-spec {
-            text-align: center;
-        }
+.car-spec {
+    text-align: center;
+}
 
-        .car-spec span {
-            display: block;
-            font-weight: bold;
-            color: #ff6b6b;
-        }
-
-        .price-breakdown {
-            margin-top: 20px;
-        }
-
-        .price-breakdown div {
-            display: flex;
-            justify-content: space-between;
-            padding: 5px 0;
-        }
-
-        .total {
-            font-weight: bold;
-        }
+.car-spec span {
+    display: block;
+    font-weight: bold;
+    color: #ff6b6b;
+}
     </style>
 </head>
 
@@ -69,26 +55,9 @@
                     <h3>Specifications</h3>
                     <ul id="car-specs-list"></ul>
                 </div>
-                <h3>Pricing Details</h3>
-                <div class="price-breakdown">
-                    <div>
-                        <span>Car Price:</span>
-                        <span class="price" id="car-price"></span>
-                    </div>
-                    <div>
-                        <span>Shipping Cost:</span>
-                        <span class="price" id="shipping-cost"></span>
-                    </div>
-                    <div>
-                        <span>Taxes:</span>
-                        <span class="price" id="taxes"></span>
-                    </div>
-                    <div class="total">
-                        <span>Total Price:</span>
-                        <span class="price" id="total-price"></span>
-                    </div>
-                </div>
-                <a href="confirmation.html?model=" class="cta-button">Confirm Purchase</a>
+                <h3>Price</h3>
+                <p class="price" id="car-price"></p>
+                <a href="confirmation.html?model=""" class="cta-button">Confirm Purchase</a>
             </div>
         </div>
     </section>
@@ -101,4 +70,3 @@
 </body>
 
 </html>
-
