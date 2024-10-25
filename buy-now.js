@@ -74,27 +74,51 @@ const cars = {
 
 // Utility function to get URL parameter
 function getQueryParam(param) {
-    return new URLSearchParams(window.location.search).get(param);
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
 }
 
-// Function to display car details
-function displayCarDetails(model) {
-    const car = cars[model] || cars['free'];
-
-    document.getElementById('car-title').textContent = car.title;
+function displayCarDetails(carModel) {
+    const car = cars[carModel] || cars['free']; // Use the free car model as a fallback
+    document.getElementById('car-title').innerText = car.title;
     document.getElementById('car-image').src = car.image;
-    document.getElementById('car-description').textContent = car.description;
+    document.getElementById('car-description').innerText = car.description;
 
     const specsList = document.getElementById('car-specs-list');
-    specsList.innerHTML = car.specs.map(spec => `<li>${spec}</li>`).join('');
+    specsList.innerHTML = ''; // Clear previous specs
+    car.specs.forEach(spec => {
+        const li = document.createElement('li');
+        li.innerText = spec;
+        specsList.appendChild(li);
+    });
 
-    document.getElementById('car-price').textContent = car.price;
+    document.getElementById('car-price').innerText = car.price;
 
-    // Update purchase button link
+    // Update the confirm purchase button URL
     const confirmButton = document.querySelector('.cta-button');
-    confirmButton.href = model !== 'free' ? `confirmation.html?model=${model}` : '#';
-    confirmButton.style.display = model !== 'free' ? 'inline-block' : 'none';
+    if (carModel !== 'free') {
+        confirmButton.href = `confirmation.html?model=${carModel}`;
+        confirmButton.onclick = function() {
+            const orderData = {
+                model: car.title,
+                date: new Date().toLocaleDateString(),
+                price: car.price,
+                status: "Pending"
+            };
+            saveOrderToHistory(orderData); // Call function to save order
+        };
+        confirmButton.style.display = 'inline-block'; // Show button
+    } else {
+        confirmButton.style.display = 'none'; // Hide button if no valid model
+    }
 }
 
-// Get the model from URL and display details
-displayCarDetails(getQueryParam('model'));
+// Function to save order data to local storage
+function saveOrderToHistory(order) {
+    let orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
+    orderHistory.push(order);
+    localStorage.setItem('orderHistory', JSON.stringify(orderHistory));
+}
+
+const model = getQueryParam('model');
+displayCarDetails(model);
