@@ -7,22 +7,35 @@
     <title>Buy Car</title>
     <link rel="stylesheet" href="models.css">
     <style>
+        /* Adjust your styling based on your design needs */
         .car-specs {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid #eee;
-    padding-top: 15px;
-}
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
 
-.car-spec {
-    text-align: center;
-}
+        .car-image {
+            width: 100%;
+            max-width: 500px; /* Adjust the size as needed */
+        }
 
-.car-spec span {
-    display: block;
-    font-weight: bold;
-    color: #ff6b6b;
-}
+        .car-specs ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .cta-button:hover {
+            background-color: #ff3d3d;
+        }
     </style>
 </head>
 
@@ -30,7 +43,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="carlogo.png" alt="logo" id="logo">
+                <img src="carlogo.png" alt="LuxeDrive logo" id="logo">
                 <a href="index.html">LuxeDrive</a>
             </div>
             <ul>
@@ -57,7 +70,7 @@
                 </div>
                 <h3>Price</h3>
                 <p class="price" id="car-price"></p>
-                <a href="confirmation.html?model=""" class="cta-button">Confirm Purchase</a>
+                <a href="#" class="cta-button">Confirm Purchase</a>
             </div>
         </div>
     </section>
